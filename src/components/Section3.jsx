@@ -11,7 +11,7 @@ function Section3() {
           sx={{
             backgroundColor: '#f5f5f5',
             width: "100%",
-            height: "115vh",
+            height: "100vh",
             position: "relative",
             display: "flex",
           }}
@@ -34,8 +34,8 @@ function Section3() {
           <Box
           sx={{
             position: "absolute",
-            bottom: "54.99%",
-            left: "69.9%",
+            bottom: "55%",
+            left: "70%",
             transform: "translate(-50%, 50%)", 
             display: "flex",
             flexDirection: "column", 

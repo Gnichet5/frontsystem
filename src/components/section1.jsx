@@ -8,7 +8,7 @@ function Section1() {
       sx={{
         backgroundColor: '#f5f5f5',
         width: "100%",
-        height: '92vh',
+        height: '100vh',
         borderBottomRightRadius: '20px',
         borderBottomLeftRadius: '20px', 
         position: "relative", 
@@ -19,7 +19,7 @@ function Section1() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '40px',
+          gap: '0px',
         }}
       >
         <Box
@@ -30,16 +30,19 @@ function Section1() {
             transform: "translate(-50%, 50%)", 
             display: "flex",
             flexDirection: "column", 
-            gap: "40px",
+            gap: "0px",
           }}
         >
           <Cards
-            tit="Problema?"
-            desc="Descrição bonitinha do bagulho das queimadas"
+            tit="Problema"
+            desc="Focos de incêndio em habitats naturais não apenas consomem a flora e a fauna, mas também desestabilizam ecossistemas inteiros,
+             ameaçando a sobrevivência das espécies e o equilíbrio da biodiversidade que sustenta a vida no planeta. "
           />
           <Cards
-            tit="Solução !"
-            desc="Descrição bonitinha do nosso produto"
+            tit="Solução"
+            desc="Com nosso sistema de sensores de temperatura e umidade, transformamos a prevenção em ação,
+             enviando alertas imediatos que capacitam comunidades e autoridades a agir rapidamente contra incêndios,
+             salvando vidas e preservando os preciosos ecossistemas que sustentam nosso mundo."
           />
         </Box>
 
@@ -54,7 +57,7 @@ function Section1() {
           }}
         >
           <Typography style={{ fontSize: '100px', fontFamily: 'Quicksand, sans-serif' }}>
-            Na busca  <br /> por  <br/> <strong>solução</strong>?
+          Tecnologia <br /> que<br/> <strong>Protege o Futuro</strong>?
           </Typography>
         </Box>
       </Box>

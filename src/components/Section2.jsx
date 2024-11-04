@@ -49,12 +49,14 @@ function Section2() {
           }}
         >
           <Cards
-            tit="Entendo a situação"
-            desc="O aumento crescente das queimadas no cenário nacional, é compreensível o aumento..."
+            tit="Situação"
+            desc="O aumento das queimadas provoca uma catástrofe silenciosa: a extinção de espécies animais e a destruição de colheitas essenciais. 
+            Cada incêndio não apenas consome a vida selvagem, mas também arrisca a segurança alimentar de comunidades."
           />
           <Cards
-            tit="Como afeta a gente?"
-            desc="Entendo o meio ambiente como um ecossistema completo, podemos perceber..."
+            tit="Consequência"
+            desc="As queimadas estão se tornando uma emergência real, afetando diretamente a saúde da população e a vida selvagem. 
+            A fumaça tóxica polui o ar que respiramos, causando doenças respiratórias e aumentando o sofrimento das comunidades "
           />
         </Box>
 
