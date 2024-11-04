@@ -57,7 +57,7 @@ function Section1() {
           }}
         >
           <Typography style={{ fontSize: '100px', fontFamily: 'Quicksand, sans-serif' }}>
-          Tecnologia <br /> que<br/> <strong>Protege o Futuro</strong>?
+          Tecnologia <br /> que<br/> <strong>Protege o Futuro</strong>
           </Typography>
         </Box>
       </Box>

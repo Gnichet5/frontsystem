@@ -44,7 +44,7 @@ function Section3() {
         >
           <Cards
             tit="Como funciona?"
-            desc="Descrição bonitinha do bagulho das queimadas"
+            desc="Utilizando de sensores especializados na captação de temperatura e umidade, o sistema é capaz de realizar um monitoramento em tempo real e enviar alertas para contramedidas."
           />
           <Cards
             tit="Componentes"
@@ -53,7 +53,7 @@ function Section3() {
 
 <Cards
             tit="Área de atuação"
-            desc="Descrição bonitinha do nosso produto"
+            desc="Reservas florestais"
           />
         </Box>
 
