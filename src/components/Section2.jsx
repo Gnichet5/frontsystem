@@ -50,13 +50,13 @@ function Section2() {
         >
           <Cards
             tit="Situação"
-            desc="O aumento das queimadas provoca uma catástrofe silenciosa: a extinção de espécies animais e a destruição de colheitas essenciais. 
-            Cada incêndio não apenas consome a vida selvagem, mas também arrisca a segurança alimentar de comunidades."
+            desc="O aumento das queimadas traz uma catástrofe silenciosa, consumindo a vida selvagem e a segurança alimentar."
+                maxWidth= "370px"
           />
           <Cards
             tit="Consequência"
-            desc="As queimadas estão se tornando uma emergência real, afetando diretamente a saúde da população e a vida selvagem. 
-            A fumaça tóxica polui o ar que respiramos, causando doenças respiratórias e aumentando o sofrimento das comunidades "
+            desc="As queimadas afetam diretamente a saúde da população e a vida selvagem, poluindo o nosso ar "
+                maxWidth= "400px"
           />
         </Box>
 
