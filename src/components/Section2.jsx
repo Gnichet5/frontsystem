@@ -1,23 +1,20 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Chart from "react-apexcharts";
+import Graf from "./grafico1";
+import ScatterPlot from "./grafico3";
+import LineGraph from "./grafico2";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Cards from "./Cards";
+import { Line } from "react-chartjs-2";
+
 
 function Section2() {
-  const chartOptions = {
-    chart: {
-      type: 'bar',
-      toolbar: { show: false },
-    },
-    xaxis: { categories: ["2020", "2021", "2022", "2023"] },
-    dataLabels: { enabled: false },
-    colors: ['#000000'],
-  };
-
-  const chartSeries = [{ name: "Desempenho", data: [10, 20, 30, 40] }];
-
   return (
- <Box id="charts-section"
+    <Box
+      id="charts-section"
       sx={{
         backgroundColor: 'black',
         width: "100%",
@@ -26,7 +23,6 @@ function Section2() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-  
       }}
     >
       <Box
@@ -37,7 +33,7 @@ function Section2() {
           width: '80%',
           maxWidth: '800px',
           transform: "translateY(-10%)",
-            marginTop: '70px'
+          marginTop: '70px'
         }}
       >
         <Box 
@@ -45,18 +41,17 @@ function Section2() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
-          
           }}
         >
           <Cards
             tit="Situação"
             desc="O aumento das queimadas traz uma catástrofe silenciosa, consumindo a vida selvagem e a segurança alimentar."
-                maxWidth= "370px"
+            maxWidth= "370px"
           />
           <Cards
             tit="Consequência"
-            desc="As queimadas afetam diretamente a saúde da população e a vida selvagem, poluindo o nosso ar "
-                maxWidth= "400px"
+            desc="As queimadas afetam diretamente a saúde da população e a vida selvagem, poluindo o nosso ar."
+            maxWidth= "400px"
           />
         </Box>
 
@@ -68,13 +63,20 @@ function Section2() {
         >
           Crescimento das ocorrências
         </Typography>
-<Box> </Box>
-        <Chart
-          options={chartOptions}
-          series={chartSeries}
-          type="bar"
-          height={350}
-        />
+
+        <Box sx={{ marginTop: '20px' }}>
+          <Swiper spaceBetween={50} slidesPerView={1}>
+            <SwiperSlide>
+              <Graf />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ScatterPlot /> 
+            </SwiperSlide>  
+            <SwiperSlide>
+              <LineGraph/>
+            </SwiperSlide>
+          </Swiper>
+        </Box>
       </Box>
     </Box>
   );
