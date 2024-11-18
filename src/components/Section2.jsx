@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import Graf from "./grafico1";
 import ScatterPlot from "./grafico3";
-import LineGraph from "./grafico2";
+import BarGraph from "./grafico2";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -73,7 +73,7 @@ function Section2() {
               <ScatterPlot /> 
             </SwiperSlide>  
             <SwiperSlide>
-              <LineGraph/>
+            <BarGraph/>
             </SwiperSlide>
           </Swiper>
         </Box>
