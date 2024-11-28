@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 function Section4 (){
     return (
     <Box
-      id="product-section"
+      id="Código"
       sx={{
         backgroundColor: "#00000",
         width: "100%",

@@ -60,6 +60,18 @@ function Header() {
             >
               Produto
             </Button>
+
+            <Button
+              onClick={() => scrollToSection('Código')}
+              sx={{
+                color: 'black',
+                fontFamily: 'Quicksand, sans-serif',
+                padding: '16px 32px',
+                fontSize: '20px',
+              }}
+            >
+              Código
+            </Button>
           </Box>
         </Toolbar>
       </Container>
