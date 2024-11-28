@@ -1,20 +1,23 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Graf from "./grafico1";
-import ScatterPlot from "./grafico3";
-import BarGraph from "./grafico2";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import Chart from "react-apexcharts";
 import Cards from "./Cards";
-import { Line } from "react-chartjs-2";
-
 
 function Section2() {
+  const chartOptions = {
+    chart: {
+      type: 'bar',
+      toolbar: { show: false },
+    },
+    xaxis: { categories: ["2020", "2021", "2022", "2023"] },
+    dataLabels: { enabled: false },
+    colors: ['#000000'],
+  };
+
+  const chartSeries = [{ name: "Desempenho", data: [10, 20, 30, 40] }];
+
   return (
-    <Box
-      id="charts-section"
+ <Box id="charts-section"
       sx={{
         backgroundColor: 'black',
         width: "100%",
@@ -23,6 +26,7 @@ function Section2() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+  
       }}
     >
       <Box
@@ -33,7 +37,7 @@ function Section2() {
           width: '80%',
           maxWidth: '800px',
           transform: "translateY(-10%)",
-          marginTop: '70px'
+            marginTop: '70px'
         }}
       >
         <Box 
@@ -41,17 +45,16 @@ function Section2() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
+          
           }}
         >
           <Cards
-            tit="Situação"
-            desc="O aumento das queimadas traz uma catástrofe silenciosa, consumindo a vida selvagem e a segurança alimentar."
-            maxWidth= "370px"
+            tit="Entendo a situação"
+            desc="O aumento crescente das queimadas no cenário nacional, é compreensível o aumento..."
           />
           <Cards
-            tit="Consequência"
-            desc="As queimadas afetam diretamente a saúde da população e a vida selvagem, poluindo o nosso ar."
-            maxWidth= "400px"
+            tit="Como afeta a gente?"
+            desc="Entendo o meio ambiente como um ecossistema completo, podemos perceber..."
           />
         </Box>
 
@@ -63,20 +66,13 @@ function Section2() {
         >
           Crescimento das ocorrências
         </Typography>
-
-        <Box sx={{ marginTop: '20px' }}>
-          <Swiper spaceBetween={50} slidesPerView={1}>
-            <SwiperSlide>
-              <Graf />
-            </SwiperSlide>
-            <SwiperSlide>
-              <ScatterPlot /> 
-            </SwiperSlide>  
-            <SwiperSlide>
-            <BarGraph/>
-            </SwiperSlide>
-          </Swiper>
-        </Box>
+<Box> </Box>
+        <Chart
+          options={chartOptions}
+          series={chartSeries}
+          type="bar"
+          height={350}
+        />
       </Box>
     </Box>
   );
