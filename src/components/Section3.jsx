@@ -48,13 +48,10 @@ function Section3() {
           />
           <Cards
             tit="Componentes"
-            desc="Descrição bonitinha do nosso produto"
+            desc=" A combinação do sensor DHT22 para monitoramento de temperatura e umidade, o buzzer para alertar sobre incêndios e o microcontrolador para processar os dados e executar ações, proporciona uma solução eficaz para a detecção e mitigação de incêndios em ambientes naturais e florestais."
           />
 
-<Cards
-            tit="Área de atuação"
-            desc="Reservas florestais"
-          />
+
         </Box>
 
         </Box>
