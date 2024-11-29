@@ -4,17 +4,18 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-
 function Graf() {
   const data = {
     labels: [
-      '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'
+      '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', 
+      '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'
     ],
     datasets: [
       {
         label: 'Focos de Queimada',
         data: [
-          580, 1210, 915, 587, 909, 1194, 1012, 1161, 1096, 754, 489, 347, 2444, 1159, 521, 602, 1440, 627, 840, 734, 350, 1111, 2277, 742, 315, 352, 3483
+          20000, 25000, 15000, 18000, 40000, 45000, 38000, 65000, 45000, 50000, 20000, 15000, 40000, 
+          10000, 10000, 20000, 30000, 25000, 30000, 30000, 15000, 30000, 35000, 30000, 40000, 20000, 45000
         ],
         borderColor: 'black',
         backgroundColor: 'black',
@@ -31,13 +32,12 @@ function Graf() {
       },
       title: {
         display: true,
-        text: 'Focos de queimada em São Paulo - AGOSTO',
+        text: 'Focos de queimada na Amazônia',
       },
     },
     scales: {
       y: {
         beginAtZero: true,
-        max: 3500,
         title: {
           display: true,
           text: 'Focos de Queimada',
@@ -47,6 +47,6 @@ function Graf() {
   };
 
   return <Line data={data} options={options} />;
-};
+}
 
 export default Graf;

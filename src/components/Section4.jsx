@@ -26,7 +26,7 @@ function Section4 (){
         }}
       >
         <iframe
-          src="https://wokwi.com/projects/411294519932756993"
+          src="https://wokwi.com/projects/415817468188238849"
           title="Simulador Wokwi"
           width="100%"
           height="100%"

@@ -1,47 +1,51 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
-const data = [
-  { year: 1998, value: 580 },
-  { year: 1999, value: 1210 },
-  { year: 2000, value: 915 },
-  { year: 2001, value: 587 },
-  { year: 2002, value: 909 },
-  { year: 2003, value: 1194 },
-  { year: 2004, value: 1012 },
-  { year: 2005, value: 1161 },
-  { year: 2006, value: 1096 },
-  { year: 2007, value: 754 },
-  { year: 2008, value: 489 },
-  { year: 2009, value: 347 },
-  { year: 2010, value: 2444 },
-  { year: 2011, value: 1159 },
-  { year: 2012, value: 521 },
-  { year: 2013, value: 602 },
-  { year: 2014, value: 1440 },
-  { year: 2015, value: 627 },
-  { year: 2016, value: 840 },
-  { year: 2017, value: 734 },
-  { year: 2018, value: 350 },
-  { year: 2019, value: 1111 },
-  { year: 2020, value: 2277 },
-  { year: 2021, value: 742 },
-  { year: 2022, value: 315 },
-  { year: 2023, value: 352 },
-  { year: 2024, value: 3483 }
-];
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const BarGraph = () => (
-  <ResponsiveContainer width="100%" height={400}>
-    <BarChart data={data}>
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="year" label={{ value: "Ano", position: "insideBottomRight", offset: -5 }} />
-      <YAxis label={{ value: "Focos de Queimada", angle: -90, position: "insideLeft" }} />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="value" fill="#000000" />
-    </BarChart>
-  </ResponsiveContainer>
-);
+function Graf() {
+  const data = {
+    labels: [
+      '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', 
+      '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'
+    ],
+    datasets: [
+      {
+        label: 'Focos de Queimada',
+        data: [
+          20000, 25000, 15000, 18000, 40000, 45000, 38000, 65000, 45000, 50000, 20000, 15000, 40000, 
+          10000, 10000, 20000, 30000, 25000, 30000, 30000, 15000, 30000, 35000, 30000, 40000, 20000, 45000
+        ],
+        backgroundColor: 'black',
+      },
+    ],
+  };
 
-export default BarGraph;
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Focos de Queimada na Amazônia (1998-2024)',
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Número de Focos de Queimada',
+        },
+      },
+    },
+  };
+
+  return <Bar data={data} options={options} />;
+}
+
+export default Graf;
